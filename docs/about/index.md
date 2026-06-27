@@ -1,6 +1,6 @@
 # About
 
-JiaLearn is a technical learning homepage for collecting high-quality notes, project reflections, tool reviews, and stage-by-stage understanding of AI engineering topics.
+JiaLearn is a personal technical homepage for collecting project showcases, technical notes, tool reviews, and stage-by-stage understanding of AI engineering topics.
 
 The site focuses on:
 
@@ -11,4 +11,4 @@ The site focuses on:
 - AI Tools and Workflow Automation
 - Practical Evaluation of LLM Applications
 
-It is designed as a long-term technical record rather than a personal profile or full resume.
+It is designed as a long-term public technical record rather than a full resume.

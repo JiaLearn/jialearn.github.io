@@ -1,8 +1,26 @@
-# JiaLearn Technical Homepage
+# JiaLearn
 
-This repository contains the VitePress source for `jialearn.github.io`, a concise technical homepage for JiaLearn.
+Personal technical homepage for AI application projects, technical writing, tool reviews, and learning records.
 
-The site is intended for long-term notes, project reflections, tool reviews, and learning roadmaps around:
+Live site:
+
+```text
+https://jialearn.github.io
+```
+
+## Site Purpose
+
+This site is used to present JiaLearn's public technical work in a concise and maintainable format. It is not a full resume; it focuses on projects, writing, reviews, and learning progress.
+
+The homepage is organized around:
+
+- Project showcase space
+- Technical notes
+- AI tool and framework reviews
+- Learning roadmap
+- AI engineering focus areas
+
+## Focus Areas
 
 - LLM Application Development
 - AI Agent Engineering
@@ -11,78 +29,82 @@ The site is intended for long-term notes, project reflections, tool reviews, and
 - AI Tools and Workflow Automation
 - Practical Evaluation of LLM Applications
 
-## Requirements
+## Content Sections
 
-- Node.js 20 or later
-- npm
+- `Home`: personal technical homepage and main entry points
+- `Projects`: reproducible projects and project documentation
+- `Notes`: structured learning notes
+- `Reviews`: practical reviews of tools, frameworks, model APIs, and workflows
+- `Roadmap`: staged learning plan
+- `About`: technical interests and site purpose
 
-## Install
+## Project Standard
+
+Projects are added only after they are:
+
+- Reproducible
+- Documented
+- Meaningful enough to share
+- Honest about limitations
+- Supported by examples, screenshots, or evaluation notes when useful
+
+## Tech Stack
+
+- VitePress
+- Markdown
+- GitHub Pages
+- GitHub Actions
+
+## Local Development
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Run Locally
+Run locally:
 
 ```bash
 npm run dev
 ```
 
-VitePress will print a local preview URL, usually `http://localhost:5173`.
-
-## Build
+Build:
 
 ```bash
 npm run build
 ```
 
-The generated static site is written to:
-
-```text
-docs/.vitepress/dist
-```
-
-## Preview Production Build
+Preview the production build:
 
 ```bash
 npm run preview
 ```
 
-## Deploy
+## Deployment
 
-This repository includes a GitHub Actions workflow at `.github/workflows/deploy.yml`.
+The site is deployed through GitHub Actions.
 
-After pushing to the `main` branch of `JiaLearn/jialearn.github.io`, GitHub Actions will:
+After pushing to `main`, the workflow in `.github/workflows/deploy.yml` builds the VitePress site and publishes `docs/.vitepress/dist` to GitHub Pages.
 
-1. Install dependencies.
-2. Build the VitePress site.
-3. Upload `docs/.vitepress/dist`.
-4. Deploy it with GitHub Pages.
+## Add Content
 
-In the GitHub repository settings, set Pages to use **GitHub Actions** as the build and deployment source.
-
-## Add a New Note
-
-Create a new Markdown file under the relevant section, for example:
+Add notes under:
 
 ```text
-docs/notes/my-new-note.md
+docs/notes/
 ```
 
-Then link it from the section index:
+Add project documentation under:
 
 ```text
-docs/notes/index.md
+docs/projects/
 ```
 
-Keep notes reproducible, source-aware, and useful for future review.
+Add reviews under:
 
-## Content Structure
+```text
+docs/reviews/
+```
 
-- `docs/index.md`: Home page
-- `docs/notes/`: Learning notes
-- `docs/projects/`: Project records
-- `docs/reviews/`: Tool and framework reviews
-- `docs/roadmap/`: Learning roadmap
-- `docs/about/`: Technical focus and site purpose
-- `docs/.vitepress/config.mts`: VitePress configuration
+Then link new pages from the relevant section index.

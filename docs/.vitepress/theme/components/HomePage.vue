@@ -8,33 +8,56 @@ const focusAreas = [
   'Practical Evaluation'
 ]
 
+const highlights = [
+  {
+    title: 'Projects',
+    eyebrow: 'Showcase',
+    text: 'A place for reproducible AI application, agent, RAG, and automation work once each project is documented enough to share.',
+    link: '/projects/'
+  },
+  {
+    title: 'Notes',
+    eyebrow: 'Writing',
+    text: 'Structured technical notes for implementation details, concepts, and project lessons worth revisiting.',
+    link: '/notes/'
+  },
+  {
+    title: 'Reviews',
+    eyebrow: 'Evaluation',
+    text: 'Practical reviews of AI coding tools, frameworks, model APIs, vector databases, and workflow tools.',
+    link: '/reviews/'
+  }
+]
+
+const projectTracks = [
+  {
+    title: 'LLM Applications',
+    status: 'Preparing',
+    text: 'Small applications that connect prompts, UI, APIs, data flow, and evaluation into usable workflows.'
+  },
+  {
+    title: 'Agent and Tool Workflows',
+    status: 'Preparing',
+    text: 'Experiments around tool calling, task decomposition, memory, approval flows, and reliability checks.'
+  },
+  {
+    title: 'RAG and Knowledge Systems',
+    status: 'Preparing',
+    text: 'Retrieval pipelines, indexing choices, grounding strategies, and answer-quality review.'
+  },
+  {
+    title: 'Automation Utilities',
+    status: 'Preparing',
+    text: 'Data analysis, reporting, and workflow automation scripts that are clear enough to reproduce.'
+  }
+]
+
 const categories = [
   { title: 'Agent Engineering', link: '/notes/agent-engineering', note: 'Planning, tools, memory' },
   { title: 'RAG', link: '/notes/rag', note: 'Retrieval and grounding' },
   { title: 'LLM Application', link: '/notes/llm-application', note: 'Patterns and interfaces' },
   { title: 'Engineering Basics', link: '/notes/engineering-basics', note: 'Reliable foundations' },
   { title: 'Data Automation', link: '/notes/data-analysis-automation', note: 'Repeatable analysis' }
-]
-
-const highlights = [
-  {
-    title: 'Notes',
-    eyebrow: 'Learning Archive',
-    text: 'Organized notes for concepts, implementation details, and lessons worth revisiting.',
-    link: '/notes/'
-  },
-  {
-    title: 'Reviews',
-    eyebrow: 'Tool Evaluation',
-    text: 'Practical reviews of AI coding tools, frameworks, model APIs, vector databases, and workflow tools.',
-    link: '/reviews/'
-  },
-  {
-    title: 'Projects',
-    eyebrow: 'Reproducible Work',
-    text: 'Projects will be added after they become reproducible, documented, and meaningful enough to share.',
-    link: '/projects/'
-  }
 ]
 
 const roadmap = [
@@ -67,15 +90,16 @@ const tags = [
     <section class="jl-hero" aria-labelledby="home-title">
       <div class="jl-hero__inner">
         <div class="jl-hero__copy">
-          <p class="jl-kicker">JiaLearn Blog</p>
-          <h1 id="home-title">Learning AI engineering by building, reviewing, and writing.</h1>
+          <p class="jl-kicker">JiaLearn</p>
+          <h1 id="home-title">Personal homepage for AI application projects and technical writing.</h1>
           <p class="jl-lead">
             JiaLearn focuses on LLM applications, AI agent engineering, RAG systems,
-            data analysis automation, workflow tools, and practical evaluation.
+            data analysis automation, workflow tools, and practical evaluation. This site
+            collects project showcases, technical notes, reviews, and learning milestones.
           </p>
           <div class="jl-actions">
-            <a class="jl-button jl-button--primary" href="/notes/">Read Notes</a>
-            <a class="jl-button" href="/roadmap/">Roadmap</a>
+            <a class="jl-button jl-button--primary" href="/projects/">View Projects</a>
+            <a class="jl-button" href="/notes/">Read Notes</a>
           </div>
         </div>
         <div class="jl-hero__panel" aria-label="Focus areas">
@@ -93,7 +117,7 @@ const tags = [
           <div class="jl-avatar" aria-hidden="true">JL</div>
           <div>
             <h2>JiaLearn</h2>
-            <p>Technical notes, tool reviews, project reflections, and staged learning records for AI engineering.</p>
+            <p>AI application projects, technical writing, tool reviews, and stage-by-stage learning records.</p>
           </div>
           <div class="jl-profile__links">
             <a href="/about/">About</a>
@@ -102,10 +126,10 @@ const tags = [
         </section>
 
         <section class="jl-card jl-note-card">
-          <p class="jl-card-label">Announcement</p>
+          <p class="jl-card-label">Site Purpose</p>
           <p>
-            This site is being built as a long-term technical archive. Content will be added after it is clear,
-            reproducible, and useful for later review.
+            This homepage is designed for long-term public display: projects first, supported by notes,
+            reviews, and a transparent learning roadmap.
           </p>
         </section>
 
@@ -125,6 +149,29 @@ const tags = [
             <h2>{{ item.title }}</h2>
             <p>{{ item.text }}</p>
           </a>
+        </section>
+
+        <section class="jl-board jl-project-showcase" aria-labelledby="project-title">
+          <div class="jl-section-head jl-section-head--split">
+            <div>
+              <p>Projects</p>
+              <h2 id="project-title">Project Showcase</h2>
+            </div>
+            <a href="/projects/">Open Projects</a>
+          </div>
+          <p class="jl-board-intro">
+            Projects will be added after they are reproducible, documented, and meaningful enough to share.
+            The showcase is prepared around these tracks.
+          </p>
+          <div class="jl-project-grid">
+            <article v-for="project in projectTracks" :key="project.title" class="jl-project-card">
+              <div>
+                <span>{{ project.status }}</span>
+                <h3>{{ project.title }}</h3>
+              </div>
+              <p>{{ project.text }}</p>
+            </article>
+          </div>
         </section>
 
         <section class="jl-board" aria-labelledby="roadmap-title">
