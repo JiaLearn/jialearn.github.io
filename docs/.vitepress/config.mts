@@ -5,6 +5,11 @@ export default defineConfig({
   description: 'Technical notes on LLM applications, AI agents, RAG, and automation.',
   lang: 'en-US',
   cleanUrls: true,
+  head: [
+    ['meta', { name: 'theme-color', content: '#0f766e' }],
+    ['meta', { property: 'og:title', content: 'JiaLearn' }],
+    ['meta', { property: 'og:description', content: 'Technical learning notes for LLM applications, AI agents, RAG, and automation.' }]
+  ],
   themeConfig: {
     logo: '/logo.svg',
     nav: [
